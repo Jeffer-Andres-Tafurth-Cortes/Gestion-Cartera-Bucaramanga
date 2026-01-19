@@ -1,0 +1,35 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 4rem;
+  gap: 2rem;
+  background: linear-gradient(135deg, #004a80, #5eb3e4);
+  color: #ffffff;
+}
+
+.content h1 {
+  font-size: 2.5rem;
+}
+
+.content p {
+  color: #e6f2fa;
+}
+
+.content button {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.75rem;
+  background-color: #f4c300;
+  color: #004a80;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.content button:hover {
+  background-color: #c4911a;
+}
+
+.imagePlaceholder {
+  background: rgba(255, 255, 255, 0.25);
+  height: 300px;
+}
