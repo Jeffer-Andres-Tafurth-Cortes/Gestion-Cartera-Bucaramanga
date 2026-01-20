@@ -1,5 +1,5 @@
 /* =========================
-   NAVBAR BASE (DESKTOP)
+   NAVBAR BASE
 ========================= */
 
 .navbar {
@@ -25,15 +25,22 @@
   align-items: center;
 }
 
-.logo {
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: #004a80;
-  white-space: nowrap;
+/* =========================
+   LOGO
+========================= */
+
+.logoWrapper {
+  position: relative;
+  width: 70px;
+  height: 70px;
+}
+
+.logoWrapper img {
+  object-fit: contain;
 }
 
 /* =========================
-   CENTER (MENU)
+   CENTER (DESKTOP MENU)
 ========================= */
 
 .center {
@@ -41,8 +48,8 @@
   justify-content: center;
   gap: 2rem;
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .center a {
@@ -64,8 +71,12 @@
 .right {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  gap: 1rem;
 }
+
+/* =========================
+   CTA
+========================= */
 
 .cta {
   background-color: #f4c300;
@@ -85,6 +96,61 @@
 }
 
 /* =========================
+   HAMBURGER
+========================= */
+
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #004a80;
+}
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.mobileMenu {
+  position: fixed;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 1px solid #e5e5e5;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  z-index: 999;
+}
+
+.mobileMenu a {
+  text-decoration: none;
+  color: #004a80;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.mobileMenu a:hover {
+  color: #5eb3e4;
+}
+
+.mobileMenu button {
+  margin-top: 1rem;
+  align-self: flex-start;
+  background-color: #f4c300;
+  color: #004a80;
+  padding: 0.6rem 1.4rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+/* =========================
    TABLET
 ========================= */
 
@@ -94,12 +160,13 @@
     padding: 0 2rem;
   }
 
-  .center {
-    gap: 1.5rem;
+  .logoWrapper {
+    width: 60px;
+    height: 60px;
   }
 
-  .center a {
-    font-size: 0.9rem;
+  .mobileMenu {
+    top: 80px;
   }
 }
 
@@ -113,18 +180,25 @@
     padding: 0 1.5rem;
   }
 
-  /* Ocultamos el menú central */
+  .logoWrapper {
+    width: 48px;
+    height: 48px;
+  }
+
   .center {
     display: none;
   }
 
-  .logo {
-    font-size: 1rem;
+  .cta {
+    display: none;
   }
 
-  .cta {
-    padding: 0.45rem 1.1rem;
-    font-size: 0.85rem;
+  .menuButton {
+    display: block;
+  }
+
+  .mobileMenu {
+    top: 70px;
   }
 }
 
@@ -137,8 +211,8 @@
     padding: 0 1rem;
   }
 
-  .cta {
-    padding: 0.4rem 1rem;
-    font-size: 0.8rem;
+  .logoWrapper {
+    width: 42px;
+    height: 42px;
   }
 }

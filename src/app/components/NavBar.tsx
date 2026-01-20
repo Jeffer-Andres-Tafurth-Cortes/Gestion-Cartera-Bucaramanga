@@ -3,6 +3,7 @@
 import Link from "next/link";
 import styles from "../styles/NavBar.module.css";
 import Image from "next/image";
+import { useState } from "react";
 
 function handleClick() {
   window.open(
@@ -12,21 +13,18 @@ function handleClick() {
 }
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
   return (
     <nav className={styles.navbar}>
-      {/* Lado izquierdo: Logo */}
+      {/* Logo */}
       <div className={styles.left}>
-        <div className={styles.logo}>
-          <Image
-            src="/logo_pravice.png"
-            alt="Logo Pravice"
-            width={80}
-            height={80}
-          />
+        <div className={styles.logoWrapper}>
+          <Image src="/logo_pravice.png" alt="Logo Pravice" fill priority />
         </div>
       </div>
 
-      {/* Centro: Menú */}
+      {/* Menú desktop */}
       <ul className={styles.center}>
         <li>
           <Link href="#inicio">Inicio</Link>
@@ -42,12 +40,40 @@ export default function Navbar() {
         </li>
       </ul>
 
-      {/* Lado derecho: CTA */}
+      {/* CTA + Hamburger */}
       <div className={styles.right}>
         <button className={styles.cta} onClick={handleClick}>
           Solicitar asesoría
         </button>
+
+        <button
+          className={styles.menuButton}
+          onClick={() => setOpen(!open)}
+          aria-label="Abrir menú"
+        >
+          ☰
+        </button>
       </div>
+
+      {/* Menú mobile */}
+      {open && (
+        <div className={styles.mobileMenu}>
+          <Link href="#inicio" onClick={() => setOpen(false)}>
+            Inicio
+          </Link>
+          <Link href="#servicios" onClick={() => setOpen(false)}>
+            Servicios
+          </Link>
+          <Link href="#nosotros" onClick={() => setOpen(false)}>
+            Nosotros
+          </Link>
+          <Link href="#contacto" onClick={() => setOpen(false)}>
+            Contacto
+          </Link>
+
+          <button onClick={handleClick}>Solicitar asesoría</button>
+        </div>
+      )}
     </nav>
   );
 }
