@@ -1,37 +1,95 @@
+/* =========================
+   CONTACT / CTA SECTION
+========================= */
+
 .contact {
-  padding: 4rem;
+  padding: 5rem 2rem;
+  background-color: #f5f7fa; /* fondo suave para destacar el CTA */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================
+   CTA BOX
+========================= */
+
+.ctaBox {
+  max-width: 720px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 3rem 2.5rem;
+  text-align: center;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   TEXT STYLES
+========================= */
+
+.ctaBox h2 {
+  font-size: 2rem;
+  color: #004a80;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.ctaBox p {
+  font-size: 1.05rem;
+  color: #555555;
+  margin-bottom: 2.2rem;
+  line-height: 1.6;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.ctaBox button {
   background-color: #004a80;
   color: #ffffff;
-}
-
-.contact h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.form {
-  max-width: 500px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.form input,
-.form textarea {
-  padding: 0.75rem;
   border: none;
-}
-
-.form button {
-  background-color: #f4c300;
-  color: #004a80;
-  padding: 0.75rem;
-  border: none;
-  font-weight: 600;
+  border-radius: 30px;
+  padding: 0.9rem 2.2rem;
+  font-size: 1rem;
+  font-weight: 500;
   cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
-.form button:hover {
-  background-color: #c4911a;
+.ctaBox button:hover {
+  background-color: #00365f;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.ctaBox button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 4rem 1.5rem;
+  }
+
+  .ctaBox {
+    padding: 2.5rem 1.8rem;
+  }
+
+  .ctaBox h2 {
+    font-size: 1.7rem;
+  }
+
+  .ctaBox p {
+    font-size: 1rem;
+  }
 }

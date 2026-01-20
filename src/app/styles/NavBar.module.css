@@ -1,10 +1,14 @@
+/* =========================
+   NAVBAR BASE (DESKTOP)
+========================= */
+
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 70px;
+  height: 90px;
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   padding: 0 2.5rem;
   background-color: #ffffff;
@@ -12,44 +16,129 @@
   z-index: 1000;
 }
 
+/* =========================
+   LEFT
+========================= */
+
 .left {
-  justify-self: start;
+  display: flex;
+  align-items: center;
 }
 
 .logo {
   font-weight: 700;
+  font-size: 1.1rem;
   color: #004a80;
+  white-space: nowrap;
 }
+
+/* =========================
+   CENTER (MENU)
+========================= */
 
 .center {
   display: flex;
+  justify-content: center;
   gap: 2rem;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .center a {
   text-decoration: none;
   color: #004a80;
   font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
 }
 
 .center a:hover {
   color: #5eb3e4;
 }
 
+/* =========================
+   RIGHT
+========================= */
+
 .right {
-  justify-self: end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .cta {
   background-color: #f4c300;
   color: #004a80;
-  padding: 0.5rem 1.25rem;
+  padding: 0.55rem 1.4rem;
   border: none;
+  border-radius: 4px;
   font-weight: 600;
+  font-size: 0.9rem;
   cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
 }
 
 .cta:hover {
   background-color: #c4911a;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px) {
+  .navbar {
+    height: 80px;
+    padding: 0 2rem;
+  }
+
+  .center {
+    gap: 1.5rem;
+  }
+
+  .center a {
+    font-size: 0.9rem;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 70px;
+    padding: 0 1.5rem;
+  }
+
+  /* Ocultamos el menú central */
+  .center {
+    display: none;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .cta {
+    padding: 0.45rem 1.1rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 420px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+
+  .cta {
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+  }
 }
