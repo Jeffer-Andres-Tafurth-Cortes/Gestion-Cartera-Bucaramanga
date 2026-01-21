@@ -39,7 +39,7 @@ export default function Footer() {
         </a>
 
         <a
-          href="#"
+          href="https://www.linkedin.com/company/praviceabogadosespecializados/"
           aria-label="LinkedIn"
           className={`${styles.social} ${styles.linkedin}`}
           target="_blank"
