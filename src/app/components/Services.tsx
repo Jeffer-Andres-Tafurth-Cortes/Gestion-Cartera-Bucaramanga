@@ -5,24 +5,24 @@ import { motion } from "framer-motion";
 
 const services = [
   {
-    title: "Recuperación de cartera",
+    title: "Recuperación de cartera en Bucaramanga",
     description:
-      "Implementamos estrategias orientadas a la recuperación efectiva de obligaciones vencidas, priorizando la negociación y el cumplimiento.",
+      "Apoyamos a empresas y personas naturales en Bucaramanga en la recuperación de obligaciones vencidas, priorizando la negociación responsable y la normalización de la cartera sin afectar la relación comercial.",
   },
   {
-    title: "Gestión de cartera",
+    title: "Gestión integral de cartera",
     description:
-      "Administramos y supervisamos procesos de cartera con seguimiento constante, reportes claros y control de cada etapa.",
+      "Administramos procesos de cartera para empresas de Bucaramanga y Santander, con seguimiento constante, control de cada etapa y reportes claros que facilitan la toma de decisiones.",
   },
   {
     title: "Recaudo de cartera",
     description:
-      "Ejecutamos procesos de recaudo estructurados que facilitan el pago oportuno y reducen los índices de morosidad.",
+      "Implementamos estrategias de recaudo estructuradas que permiten reducir la morosidad y facilitar el pago oportuno, adaptadas a la realidad económica y comercial de Bucaramanga.",
   },
   {
-    title: "Cobro de cartera",
+    title: "Cobro de cartera prejurídico y jurídico",
     description:
-      "Desarrollamos acciones de cobro bajo lineamientos legales, garantizando transparencia y trato responsable.",
+      "Desarrollamos procesos de cobro de cartera bajo lineamientos legales vigentes en Colombia, garantizando un trato respetuoso, transparente y acorde a la normativa aplicable.",
   },
 ];
 
@@ -41,7 +41,7 @@ export default function Services() {
         viewport={{ once: true }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        Nuestros servicios
+        Servicios de gestión y recuperación de cartera en Bucaramanga
       </motion.h2>
 
       <motion.div

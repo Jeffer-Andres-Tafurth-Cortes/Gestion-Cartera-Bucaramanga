@@ -30,7 +30,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
         >
-          Gestión y cobro de cartera en Bucaramanga
+          Gestión y recuperación de cartera en Bucaramanga
         </motion.h1>
 
         <motion.p
@@ -38,9 +38,10 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
         >
-          Ofrecemos servicios profesionales de gestión, recuperación y cobro de
-          cartera en Bucaramanga y Santander, con un enfoque responsable,
-          transparente y alineado con la normativa vigente.
+          Brindamos servicios especializados en gestión y recuperación de
+          cartera en Bucaramanga, apoyando a empresas, comerciantes y personas
+          naturales que necesitan soluciones efectivas para el recaudo de
+          obligaciones pendientes, siempre bajo un marco legal y ético.
         </motion.p>
 
         <motion.p
@@ -48,9 +49,10 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
         >
-          Acompañamos a empresas y personas en procesos de cartera prejurídica y
-          jurídica, priorizando la comunicación efectiva y la construcción de
-          soluciones sostenibles.
+          Entendemos que cada caso es diferente. Por eso, analizamos la
+          situación de cada cliente y diseñamos estrategias de cobro prejurídico
+          y jurídico adaptadas a la realidad del contexto empresarial y
+          comercial de Bucaramanga y Santander.
         </motion.p>
 
         <motion.button
@@ -59,7 +61,7 @@ export default function Hero() {
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
           onClick={handleClick}
         >
-          Solicitar asesoría
+          Solicitar asesoría personalizada
         </motion.button>
       </motion.div>
 
@@ -71,7 +73,7 @@ export default function Hero() {
       >
         <Image
           src="/recuperacion-cartera.webp"
-          alt="Imagen representativa de gestión y cobro de cartera"
+          alt="Gestión y recuperación de cartera para empresas en Bucaramanga"
           width={520}
           height={340}
           className={styles.image}

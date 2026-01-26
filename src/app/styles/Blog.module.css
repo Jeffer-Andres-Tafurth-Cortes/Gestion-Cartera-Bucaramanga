@@ -143,26 +143,6 @@
 }
 
 /* =========================
-   FOOTER
-========================= */
-
-.footer {
-  margin-top: 45px;
-}
-
-.allArticles {
-  font-weight: 700;
-  color: #004a80;
-  text-decoration: none;
-  font-size: 0.95rem;
-}
-
-.allArticles:hover {
-  color: #f4c300;
-  text-decoration: underline;
-}
-
-/* =========================
    RESPONSIVE
 ========================= */
 
