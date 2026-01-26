@@ -75,10 +75,11 @@ export default function About() {
       >
         <Image
           src="/logo_pravice.png"
-          width={300}
-          height={300}
-          alt="Imagen representativa de la empresa Pravice"
+          fill
+          sizes="(max-width: 768px) 100vw, 60vw"
+          alt="Gestión de cartera y obligaciones financieras en Colombia"
           className={styles.image}
+          priority
         />
       </motion.div>
     </motion.section>

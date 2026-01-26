@@ -20,7 +20,14 @@ export default function Navbar() {
       {/* Logo */}
       <div className={styles.left}>
         <div className={styles.logoWrapper}>
-          <Image src="/logo_pravice.png" alt="Logo Pravice" fill priority />
+          <Image
+            src="/logo_pravice.png"
+            alt="Logo Pravice"
+            fill
+            priority
+            sizes="(max-width: 768px) 120px, 160px"
+            style={{ objectFit: "contain" }}
+          />
         </div>
       </div>
 
@@ -46,7 +53,7 @@ export default function Navbar() {
       {/* CTA + Hamburger */}
       <div className={styles.right}>
         <button className={styles.cta} onClick={handleClick}>
-          Solicitar asesoría
+          Hablar con un asesor
         </button>
 
         <button

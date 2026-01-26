@@ -76,7 +76,9 @@ export default function Hero() {
           alt="Gestión y recuperación de cartera para empresas en Bucaramanga"
           width={520}
           height={340}
+          sizes="(max-width: 768px) 100vw, 520px"
           className={styles.image}
+          priority
         />
       </motion.div>
     </motion.section>

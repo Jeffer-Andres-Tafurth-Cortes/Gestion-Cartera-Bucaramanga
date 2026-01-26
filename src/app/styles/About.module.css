@@ -1,5 +1,5 @@
 /* =========================
-   ABOUT SECTION
+   ABOUT / FEATURED SECTION
 ========================= */
 
 .about {
@@ -13,7 +13,6 @@
 
   background-color: #f4f6f8;
 
-  /* 🔑 CLAVE */
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -45,31 +44,42 @@
 ========================= */
 
 .imagePlaceholder {
+  position: relative; /* 🔑 OBLIGATORIO PARA Image fill */
   width: 100%;
   max-width: 420px;
 
-  /* 🔑 mantiene proporción perfecta */
-  aspect-ratio: 1 / 1;
-
+  aspect-ratio: 1 / 1; /* 🔑 mantiene proporción */
   margin: 0 auto;
 
   background: #ffffff;
-  border-radius: 14px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 2.5rem;
+  border-radius: 16px;
+  overflow: hidden; /* 🔑 evita desbordes */
 
   box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
 }
 
 /* Imagen */
 .image {
+  object-fit: contain; /* logos NO se recortan */
+}
+
+/* =========================
+   FEATURED / BLOG IMAGE
+========================= */
+
+.featuredImage {
+  position: relative; /* 🔑 OBLIGATORIO */
   width: 100%;
-  height: 100%;
-  object-fit: contain; /* 🔑 LOGOS NO SE RECORTAN */
+  aspect-ratio: 16 / 9;
+
+  border-radius: 20px;
+  overflow: hidden;
+
+  background: #e5e7eb;
+}
+
+.featuredImage .image {
+  object-fit: cover; /* 🔑 imágenes editoriales */
 }
 
 /* =========================
@@ -120,6 +130,5 @@
 
   .imagePlaceholder {
     max-width: 280px;
-    padding: 2rem;
   }
 }
