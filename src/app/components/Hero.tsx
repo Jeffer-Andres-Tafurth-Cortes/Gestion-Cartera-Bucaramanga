@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import styles from "../styles/Hero.module.css";
 import { motion } from "framer-motion";
 
@@ -67,7 +68,15 @@ export default function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
-      />
+      >
+        <Image
+          src="/recuperacion-cartera.webp"
+          alt="Imagen representativa de gestión y cobro de cartera"
+          width={520}
+          height={340}
+          className={styles.image}
+        />
+      </motion.div>
     </motion.section>
   );
 }

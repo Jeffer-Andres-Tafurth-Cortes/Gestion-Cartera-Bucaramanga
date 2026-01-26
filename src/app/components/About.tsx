@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import styles from "../styles/About.module.css";
 import { motion } from "framer-motion";
 
@@ -71,7 +72,15 @@ export default function About() {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-      />
+      >
+        <Image
+          src="/logo_pravice.png"
+          width={300}
+          height={300}
+          alt="Imagen representativa de la empresa Pravice"
+          className={styles.image}
+        />
+      </motion.div>
     </motion.section>
   );
 }

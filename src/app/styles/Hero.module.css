@@ -1,7 +1,12 @@
+/* =========================
+   HERO SECTION
+========================= */
+
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  gap: 3rem;
 
   min-height: calc(100vh - 90px);
   padding: 4rem 2.5rem;
@@ -22,6 +27,7 @@
 .content h1 {
   font-size: 2.7rem;
   line-height: 1.15;
+  font-weight: 700;
 }
 
 .content p {
@@ -35,6 +41,10 @@
   margin-top: 0.9rem;
 }
 
+/* =========================
+   BUTTON
+========================= */
+
 .content button {
   margin-top: 2.4rem;
   padding: 0.95rem 2.3rem;
@@ -47,33 +57,63 @@
   cursor: pointer;
   transition:
     background-color 0.2s ease,
-    transform 0.2s ease;
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
 .content button:hover {
   background-color: #c4911a;
   transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
 }
 
 /* =========================
-   IMAGE PLACEHOLDER
+   IMAGE CONTAINER (CLAVE)
 ========================= */
 
 .imagePlaceholder {
-  max-width: 520px;
   width: 100%;
-  height: 340px;
+  max-width: 520px;
+
+  /* Mantiene proporción SIEMPRE */
+  aspect-ratio: 520 / 340;
 
   margin-right: auto;
 
   background: rgba(255, 255, 255, 0.25);
-  border-radius: 8px;
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Imagen real */
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* =========================
    RESPONSIVE
 ========================= */
 
+/* Laptops pequeñas / tablets */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 4rem 2rem;
+    gap: 2.5rem;
+  }
+
+  .content h1 {
+    font-size: 2.4rem;
+  }
+}
+
+/* Mobile */
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
@@ -85,18 +125,28 @@
     margin: 0 auto;
   }
 
+  .content button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .imagePlaceholder {
     margin: 3rem auto 0;
-    height: 240px;
+    max-width: 460px;
   }
 }
 
+/* Mobile pequeño */
 @media (max-width: 480px) {
   .content h1 {
-    font-size: 2.1rem;
+    font-size: 2.05rem;
   }
 
   .content p {
     font-size: 1rem;
+  }
+
+  .imagePlaceholder {
+    max-width: 100%;
   }
 }
