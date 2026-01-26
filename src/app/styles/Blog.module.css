@@ -1,3 +1,7 @@
+/* =========================
+   SECTION
+========================= */
+
 .section {
   padding: 90px 20px;
   background: #f9fafb;
@@ -11,6 +15,7 @@
 /* =========================
    HEADER
 ========================= */
+
 .header {
   max-width: 720px;
   margin-bottom: 60px;
@@ -20,6 +25,7 @@
   font-size: 2.3rem;
   color: #004a80;
   margin-bottom: 14px;
+  line-height: 1.25;
 }
 
 .header p {
@@ -29,36 +35,47 @@
 }
 
 /* =========================
-   ARTÍCULO DESTACADO
+   FEATURED ARTICLE
 ========================= */
+
 .featured {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: 1.25fr 1fr;
   gap: 42px;
-  align-items: center;
+  align-items: start; /* 🔑 SOLUCIÓN CLAVE */
   margin-bottom: 70px;
 }
 
+/* Imagen destacada */
 .featuredImage {
-  height: 300px;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
   border-radius: 20px;
+  overflow: hidden;
   background: linear-gradient(135deg, #e5e7eb, #d1d5db);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.12);
 }
 
+.featuredImage img {
+  object-fit: cover;
+}
+
+/* Contenido */
 .featuredContent .tag {
   display: inline-block;
   font-size: 0.75rem;
   font-weight: 700;
   color: #004a80;
   background: rgba(94, 179, 228, 0.15);
-  padding: 6px 12px;
+  padding: 6px 14px;
   border-radius: 20px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .featuredContent h3 {
-  font-size: 1.9rem;
-  color: #000000;
+  font-size: 1.85rem;
+  color: #0f172a;
   margin-bottom: 16px;
   line-height: 1.35;
 }
@@ -82,8 +99,9 @@
 }
 
 /* =========================
-   LISTADO EDITORIAL
+   EDITORIAL LIST
 ========================= */
+
 .list {
   border-top: 1px solid #e5e7eb;
 }
@@ -127,6 +145,7 @@
 /* =========================
    FOOTER
 ========================= */
+
 .footer {
   margin-top: 45px;
 }
@@ -146,13 +165,10 @@
 /* =========================
    RESPONSIVE
 ========================= */
+
 @media (max-width: 900px) {
   .featured {
     grid-template-columns: 1fr;
-  }
-
-  .featuredImage {
-    height: 230px;
   }
 
   .featuredContent h3 {

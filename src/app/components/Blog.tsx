@@ -3,6 +3,7 @@
 import Link from "next/link";
 import styles from "../styles/Blog.module.css";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 /* ======================
    ANIMATION VARIANTS
@@ -62,7 +63,14 @@ export default function Blog() {
             whileInView={{ scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
-          />
+          >
+            <Image
+              src="/dineroColombia.jpg"
+              fill
+              alt="Imagen destacada del blog sobre gestión de cartera en Bucaramanga"
+              className={styles.image}
+            />
+          </motion.div>
 
           <div className={styles.featuredContent}>
             <span className={styles.tag}>Bucaramanga</span>
