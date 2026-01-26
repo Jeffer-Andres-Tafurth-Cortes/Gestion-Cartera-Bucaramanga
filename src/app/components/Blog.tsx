@@ -1,5 +1,26 @@
+"use client";
+
 import Link from "next/link";
 import styles from "../styles/Blog.module.css";
+import { motion } from "framer-motion";
+
+/* ======================
+   ANIMATION VARIANTS
+====================== */
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0 },
+};
+
+const staggerContainer = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
 
 export default function Blog() {
   return (
@@ -8,20 +29,41 @@ export default function Blog() {
         {/* ======================
             HEADER
         ====================== */}
-        <header className={styles.header}>
+        <motion.header
+          className={styles.header}
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <h2>Actualidad en gestión de cartera en Bucaramanga</h2>
           <p>
             Análisis, novedades legales y recomendaciones prácticas sobre
             recuperación de cartera, cobranzas y procesos jurídicos en
             Bucaramanga y Santander.
           </p>
-        </header>
+        </motion.header>
 
         {/* ======================
             ARTÍCULO DESTACADO
         ====================== */}
-        <article className={styles.featured}>
-          <div className={styles.featuredImage} />
+        <motion.article
+          className={styles.featured}
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+        >
+          <motion.div
+            className={styles.featuredImage}
+            initial={{ scale: 1.05 }}
+            whileInView={{ scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
+          />
+
           <div className={styles.featuredContent}>
             <span className={styles.tag}>Bucaramanga</span>
             <h3>
@@ -42,13 +84,19 @@ export default function Blog() {
               Leer análisis completo →
             </Link>
           </div>
-        </article>
+        </motion.article>
 
         {/* ======================
             LISTADO EDITORIAL
         ====================== */}
-        <div className={styles.list}>
-          <article className={styles.item}>
+        <motion.div
+          className={styles.list}
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <motion.article className={styles.item} variants={fadeUp}>
             <span className={styles.date}>Bucaramanga · Enero 2026</span>
             <h4>Procesos jurídicos para el cobro de cartera en Santander</h4>
             <p>
@@ -59,9 +107,9 @@ export default function Blog() {
             <Link href="/novedades/cobro-juridico-santander">
               Leer artículo →
             </Link>
-          </article>
+          </motion.article>
 
-          <article className={styles.item}>
+          <motion.article className={styles.item} variants={fadeUp}>
             <span className={styles.date}>Bucaramanga · Diciembre 2025</span>
             <h4>
               Errores frecuentes en la gestión de cartera empresarial en
@@ -75,9 +123,9 @@ export default function Blog() {
             <Link href="/novedades/errores-gestion-cartera-bucaramanga">
               Leer artículo →
             </Link>
-          </article>
+          </motion.article>
 
-          <article className={styles.item}>
+          <motion.article className={styles.item} variants={fadeUp}>
             <span className={styles.date}>Bucaramanga · Noviembre 2025</span>
             <h4>¿Cuándo es recomendable iniciar un cobro prejurídico?</h4>
             <p>
@@ -88,17 +136,24 @@ export default function Blog() {
             <Link href="/novedades/cobro-prejuridico-bucaramanga">
               Leer artículo →
             </Link>
-          </article>
-        </div>
+          </motion.article>
+        </motion.div>
 
         {/* ======================
             FOOTER
         ====================== */}
-        <footer className={styles.footer}>
+        <motion.footer
+          className={styles.footer}
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
           <Link href="/novedades" className={styles.allArticles}>
             Ver todas las novedades →
           </Link>
-        </footer>
+        </motion.footer>
       </div>
     </section>
   );

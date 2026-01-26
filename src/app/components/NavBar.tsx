@@ -36,10 +36,10 @@ export default function Navbar() {
           <Link href="#nosotros">Nosotros</Link>
         </li>
         <li>
-          <Link href="#contacto">Contacto</Link>
+          <Link href="#blog">Blog</Link>
         </li>
         <li>
-          <Link href="#blog">Blog</Link>
+          <Link href="#contacto">Contacto</Link>
         </li>
       </ul>
 

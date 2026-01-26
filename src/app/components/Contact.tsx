@@ -19,6 +19,9 @@ export default function Contact() {
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
+      {/* ======================
+          CTA
+      ====================== */}
       <motion.div
         className={styles.ctaBox}
         initial={{ opacity: 0, y: 24 }}
@@ -42,7 +45,8 @@ export default function Contact() {
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
         >
           Nuestro equipo está preparado para brindarle una orientación clara y
-          responsable, ajustada a sus necesidades y a la normativa vigente.
+          responsable, ajustada a sus necesidades y a la normativa vigente en
+          Bucaramanga.
         </motion.p>
 
         <motion.button
@@ -54,6 +58,28 @@ export default function Contact() {
         >
           Solicitar asesoría
         </motion.button>
+      </motion.div>
+
+      {/* ======================
+          MAPA
+      ====================== */}
+      <motion.div
+        className={styles.mapBox}
+        initial={{ opacity: 0, y: 32 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        <h3>Nuestra ubicación</h3>
+
+        <div className={styles.mapWrapper}>
+          <iframe
+            title="Ubicación Bucaramanga"
+            src="https://www.google.com/maps?q=Bucaramanga,+Santander,+Colombia&output=embed"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
       </motion.div>
     </motion.section>
   );
