@@ -5,6 +5,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import styles from "./page.module.css";
+import Blog from "./components/Blog";
 
 export default function Home() {
   return (
@@ -22,6 +23,10 @@ export default function Home() {
 
         <section id="nosotros" className={styles.section}>
           <About />
+        </section>
+
+        <section id="blog" className={styles.section}>
+          <Blog />
         </section>
 
         <section id="contacto" className={styles.section}>

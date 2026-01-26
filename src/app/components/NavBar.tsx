@@ -38,6 +38,9 @@ export default function Navbar() {
         <li>
           <Link href="#contacto">Contacto</Link>
         </li>
+        <li>
+          <Link href="#blog">Blog</Link>
+        </li>
       </ul>
 
       {/* CTA + Hamburger */}
