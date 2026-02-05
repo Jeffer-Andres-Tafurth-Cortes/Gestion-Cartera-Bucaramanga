@@ -25,7 +25,7 @@ const staggerContainer = {
 
 export default function Blog() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} aria-labelledby="blog-title">
       <div className={styles.container}>
         {/* ======================
             HEADER
@@ -38,11 +38,13 @@ export default function Blog() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h2 id="blog-title">Actualidad en gestión de cartera en Colombia</h2>
+          <h2 id="blog-title">
+            Actualidad en gestión y cobro de cartera en Colombia
+          </h2>
           <p>
-            Análisis, novedades legales y recomendaciones prácticas sobre
-            recuperación de cartera, cobranzas y procesos jurídicos en el
-            contexto económico colombiano.
+            Información especializada sobre recuperación de cartera, cobranza
+            administrativa y procesos de cobro en Colombia, orientada a empresas
+            y personas naturales.
           </p>
         </motion.header>
 
@@ -67,33 +69,30 @@ export default function Blog() {
             <Image
               src="/dineroColombia.jpg"
               fill
-              alt="Gestión de cartera y obligaciones financieras en Colombia"
+              alt="Cobro y recuperación de cartera vencida en Colombia"
               className={styles.image}
             />
           </motion.div>
 
           <div className={styles.featuredContent}>
-            <span className={styles.tag}>Colombia</span>
+            <span className={styles.tag}>Cobranza</span>
             <span className={styles.date}>Agosto 2025</span>
 
             <h3>
-              ¿Cómo recuperar cartera vencida en Colombia sin afectar la
-              relación comercial?
+              Estrategias efectivas para el cobro de cartera vencida en Colombia
             </h3>
 
             <p>
-              En 2025, la DIAN anunció una estrategia nacional orientada a la
-              recuperación de más de $2,2 billones en cartera vencida,
-              apoyándose en análisis de datos y procesos de priorización de
-              obligaciones. Esta iniciativa buscó fortalecer la liquidez del
-              sistema económico y reducir los niveles de morosidad.
+              En 2025, distintas entidades públicas y privadas fortalecieron sus
+              mecanismos de cobro de cartera vencida con el objetivo de reducir
+              la morosidad y mejorar la liquidez. Estas acciones reflejan la
+              importancia de aplicar procesos estructurados de cobranza.
             </p>
 
             <p>
-              Aunque se trata de una acción de alcance nacional, este tipo de
-              medidas evidencian la importancia de contar con estrategias
-              estructuradas de gestión de cartera, aplicables tanto a entidades
-              públicas como a empresas y personas naturales en Colombia.
+              Una gestión de cartera adecuada permite recuperar obligaciones
+              pendientes respetando el marco legal colombiano y protegiendo los
+              intereses del acreedor.
             </p>
 
             <Link
@@ -121,17 +120,13 @@ export default function Blog() {
             <span className={styles.date}>Colombia · Enero 2026</span>
 
             <h4>
-              Corte Constitucional ordena depurar cartera vencida en el sector
-              salud
+              Medidas para depurar y cobrar cartera vencida en el sector salud
             </h4>
 
             <p>
-              A comienzos de 2026, la Corte Constitucional ordenó al Ministerio
-              de Salud adoptar medidas para depurar la cartera vencida del
-              sistema, resaltando el impacto que estos pasivos tienen sobre la
-              sostenibilidad y continuidad de los servicios. La decisión pone de
-              relieve la relevancia de una gestión de cartera eficiente en
-              sectores estratégicos.
+              Autoridades ordenaron fortalecer los procesos de cobro de cartera
+              vencida en el sector salud, destacando la necesidad de una gestión
+              eficiente para garantizar la sostenibilidad financiera.
             </p>
 
             <Link
@@ -147,16 +142,13 @@ export default function Blog() {
             <span className={styles.date}>Colombia · Diciembre 2025</span>
 
             <h4>
-              Indicadores de cartera vencida en Colombia muestran ajustes
-              durante 2025
+              Comportamiento de la cartera vencida en Colombia durante 2025
             </h4>
 
             <p>
-              Durante 2025, el comportamiento de la cartera vencida en Colombia
-              presentó señales mixtas. Aunque algunos segmentos mostraron
-              mejoras, el indicador de mora superior a 30 días se mantuvo en
-              niveles cercanos al 4,7 %, reflejando la necesidad de fortalecer
-              las estrategias de recuperación y control del riesgo crediticio.
+              Los indicadores de mora mostraron variaciones durante 2025,
+              evidenciando la necesidad de optimizar las estrategias de cobranza
+              y control de cartera.
             </p>
 
             <Link
@@ -171,17 +163,12 @@ export default function Blog() {
           <motion.article className={styles.item} variants={fadeUp}>
             <span className={styles.date}>Colombia · Noviembre 2025</span>
 
-            <h4>
-              Durante 2025 se consolidaron señales de recuperación del crédito
-              en Colombia
-            </h4>
+            <h4>Recuperación del crédito y gestión de cartera en Colombia</h4>
 
             <p>
-              En el segundo semestre de 2025, expertos del sector financiero
-              señalaron que comenzaron a evidenciarse signos de recuperación del
-              crédito en Colombia. Proyecciones de Asobancaria indicaron un
-              crecimiento moderado de la cartera crediticia, acompañado de una
-              reducción gradual en los niveles de mora.
+              Analistas destacaron avances en la recuperación del crédito,
+              acompañados de mejores prácticas en el cobro de obligaciones
+              vencidas.
             </p>
 
             <Link
@@ -193,6 +180,56 @@ export default function Blog() {
             </Link>
           </motion.article>
         </motion.div>
+
+        {/* ======================
+            PREGUNTAS FRECUENTES
+        ====================== */}
+        <motion.section
+          className={styles.faq}
+          aria-labelledby="faq-title"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <motion.h3 id="faq-title" variants={fadeUp}>
+            Preguntas frecuentes sobre gestión y cobro de cartera
+          </motion.h3>
+
+          <motion.div className={styles.faqItem} variants={fadeUp}>
+            <h4>¿Qué es la gestión de cartera vencida?</h4>
+            <p>
+              Es el conjunto de acciones orientadas a recuperar obligaciones
+              pendientes de pago, mediante procesos de cobranza administrativa o
+              jurídica, conforme a la normatividad colombiana.
+            </p>
+          </motion.div>
+
+          <motion.div className={styles.faqItem} variants={fadeUp}>
+            <h4>¿Cuándo se considera una cartera como vencida?</h4>
+            <p>
+              Una cartera se considera vencida cuando el deudor incumple el
+              plazo de pago establecido en la obligación, generando mora.
+            </p>
+          </motion.div>
+
+          <motion.div className={styles.faqItem} variants={fadeUp}>
+            <h4>¿Qué beneficios tiene una buena gestión de cobranza?</h4>
+            <p>
+              Permite mejorar el flujo de caja, reducir el riesgo financiero y
+              mantener un control adecuado sobre las obligaciones pendientes.
+            </p>
+          </motion.div>
+
+          <motion.div className={styles.faqItem} variants={fadeUp}>
+            <h4>¿La gestión de cartera debe cumplir normas legales?</h4>
+            <p>
+              Sí. Todo proceso de cobro debe respetar la ley colombiana,
+              garantizando un trato adecuado al deudor y evitando prácticas
+              indebidas.
+            </p>
+          </motion.div>
+        </motion.section>
       </div>
     </section>
   );
