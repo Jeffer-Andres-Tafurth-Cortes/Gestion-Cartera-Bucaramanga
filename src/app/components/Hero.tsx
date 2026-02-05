@@ -39,14 +39,12 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
         >
-          <p>
-            Ofrecemos servicios profesionales de{" "}
-            <strong>gestión y recuperación de cartera en Bucaramanga</strong>,
-            ayudando a empresas, comerciantes y personas naturales a recuperar
-            obligaciones pendientes mediante procesos de cobranza
-            <strong> prejurídica y jurídica</strong>, siempre bajo un marco
-            legal, ético y transparente.
-          </p>
+          Ofrecemos servicios profesionales de{" "}
+          <strong>gestión y recuperación de cartera en Bucaramanga</strong>,
+          ayudando a empresas, comerciantes y personas naturales a recuperar
+          obligaciones pendientes mediante procesos de cobranza
+          <strong> prejurídica y jurídica</strong>, siempre bajo un marco legal,
+          ético y transparente.
         </motion.p>
 
         <motion.p
@@ -54,13 +52,11 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
         >
-          <p>
-            Analizamos cada caso de forma individual para diseñar estrategias de
-            cobro adaptadas al contexto empresarial y comercial de{" "}
-            <strong>Bucaramanga y Santander</strong>, priorizando la
-            recuperación efectiva de cartera sin afectar la relación con
-            clientes ni la reputación del negocio.
-          </p>
+          Analizamos cada caso de forma individual para diseñar estrategias de
+          cobro adaptadas al contexto empresarial y comercial de{" "}
+          <strong>Bucaramanga y Santander</strong>, priorizando la recuperación
+          efectiva de cartera sin afectar la relación con clientes ni la
+          reputación del negocio.
         </motion.p>
 
         <motion.button

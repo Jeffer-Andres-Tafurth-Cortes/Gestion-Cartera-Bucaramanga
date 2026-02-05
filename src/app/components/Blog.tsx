@@ -71,6 +71,7 @@ export default function Blog() {
               fill
               alt="Cobro y recuperación de cartera vencida en Colombia"
               className={styles.image}
+              loading="eager"
             />
           </motion.div>
 

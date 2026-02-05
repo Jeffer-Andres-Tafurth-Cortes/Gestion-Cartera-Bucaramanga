@@ -16,18 +16,20 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className={styles.navbar}>
+    <nav className={styles.navbar} aria-label="Navegación principal">
       {/* Logo */}
       <div className={styles.left}>
         <div className={styles.logoWrapper}>
-          <Image
-            src="/logo_pravice.png"
-            alt="Logo Pravice"
-            fill
-            priority
-            sizes="(max-width: 768px) 120px, 160px"
-            style={{ objectFit: "contain" }}
-          />
+          <Link href="/">
+            <Image
+              src="/logo_pravice.png"
+              alt="Pravice - Gestión y cobro de cartera en Colombia"
+              fill
+              priority
+              sizes="(max-width: 768px) 120px, 160px"
+              style={{ objectFit: "contain" }}
+            />
+          </Link>
         </div>
       </div>
 
@@ -53,7 +55,7 @@ export default function Navbar() {
       {/* CTA + Hamburger */}
       <div className={styles.right}>
         <button className={styles.cta} onClick={handleClick}>
-          Hablar con un asesor
+          Asesoría en cobro de cartera
         </button>
 
         <button
