@@ -38,7 +38,7 @@ export default function Blog() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h2>Actualidad en gestión de cartera en Colombia</h2>
+          <h2 id="blog-title">Actualidad en gestión de cartera en Colombia</h2>
           <p>
             Análisis, novedades legales y recomendaciones prácticas sobre
             recuperación de cartera, cobranzas y procesos jurídicos en el

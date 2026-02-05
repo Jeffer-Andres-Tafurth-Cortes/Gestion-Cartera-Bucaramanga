@@ -13,23 +13,43 @@ export default function Home() {
       <NavBar />
 
       <main className={styles.main}>
-        <section id="inicio" className={styles.section}>
+        <section
+          id="inicio"
+          className={styles.section}
+          aria-labelledby="inicio-title"
+        >
           <Hero />
         </section>
 
-        <section id="servicios" className={styles.section}>
+        <section
+          id="servicios"
+          className={styles.section}
+          aria-labelledby="servicios-title"
+        >
           <Services />
         </section>
 
-        <section id="nosotros" className={styles.section}>
+        <section
+          id="nosotros"
+          className={styles.section}
+          aria-labelledby="nosotros-title"
+        >
           <About />
         </section>
 
-        <section id="blog" className={styles.section}>
+        <section
+          id="blog"
+          className={styles.section}
+          aria-labelledby="blog-title"
+        >
           <Blog />
         </section>
 
-        <section id="contacto" className={styles.section}>
+        <section
+          id="contacto"
+          className={styles.section}
+          aria-labelledby="contacto-title"
+        >
           <Contact />
         </section>
 

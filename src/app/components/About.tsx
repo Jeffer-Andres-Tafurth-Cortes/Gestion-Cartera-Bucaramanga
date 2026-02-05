@@ -21,6 +21,7 @@ export default function About() {
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <motion.h2
+          id="nosotros-title"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
