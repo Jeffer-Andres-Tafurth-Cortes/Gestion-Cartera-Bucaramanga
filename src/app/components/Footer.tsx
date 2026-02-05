@@ -9,43 +9,61 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function Footer() {
   return (
     <>
-      <footer className={styles.footer}>
+      <footer
+        className={styles.footer}
+        aria-label="Información corporativa y contacto"
+      >
         <div className={styles.footerContent}>
+          {/* Marca */}
           <div className={styles.brand}>
-            <h4>Pravice Abogados</h4>
+            <h4>Pravice – Gestión y Cobro de Cartera</h4>
             <p>
-              Firma especializada en gestión de carteras, derecho laboral y
-              asesoría jurídica integral en Bucaramanga y el área metropolitana.
+              Firma especializada en gestión, administración y cobro de cartera
+              en Colombia. Acompañamos a empresas y organizaciones en
+              Bucaramanga y el área metropolitana mediante procesos
+              responsables, legales y orientados a la recuperación efectiva de
+              obligaciones vencidas.
             </p>
           </div>
 
-          <div className={styles.contactInfo}>
+          {/* Contacto */}
+          <address className={styles.contactInfo}>
             <p>
-              <strong>Dirección:</strong> Bucaramanga, Santander, Colombia
+              <strong>Ubicación:</strong> Bucaramanga, Santander, Colombia
             </p>
+
             <p>
               <strong>Correo:</strong>{" "}
-              <a href="mailto:contacto@praviceabogados.com">
+              <a
+                href="mailto:contacto@praviceabogados.com"
+                title="Correo de contacto Pravice gestión de cartera"
+              >
                 contacto@praviceabogados.com
               </a>
             </p>
+
             <p>
               <strong>Teléfono:</strong>{" "}
-              <a href="tel:+573000000000">+57 300 000 0000</a>
+              <a
+                href="tel:+573000000000"
+                title="Teléfono de contacto gestión de cartera"
+              >
+                +57 300 000 0000
+              </a>
             </p>
-          </div>
+          </address>
         </div>
 
         <div className={styles.copy}>
-          <p>© 2026 Pravice Abogados. Todos los derechos reservados.</p>
+          <p>© 2026 Pravice. Todos los derechos reservados.</p>
         </div>
       </footer>
 
-      {/* Redes sociales flotantes (SIN CAMBIOS) */}
+      {/* Redes sociales flotantes */}
       <div className={styles.socialFloating}>
         <a
           href="https://api.whatsapp.com/message/RE7FEN4IGOISD1?autoload=1&app_absent=0"
-          aria-label="WhatsApp"
+          aria-label="WhatsApp Pravice gestión de cartera"
           className={`${styles.social} ${styles.whatsapp}`}
           target="_blank"
           rel="noopener noreferrer"
@@ -57,7 +75,7 @@ export default function Footer() {
 
         <a
           href="https://www.instagram.com/pravice_abogados/"
-          aria-label="Instagram"
+          aria-label="Instagram Pravice gestión de cartera"
           className={`${styles.social} ${styles.instagram}`}
           target="_blank"
           rel="noopener noreferrer"
@@ -69,7 +87,7 @@ export default function Footer() {
 
         <a
           href="https://www.linkedin.com/company/praviceabogadosespecializados/"
-          aria-label="LinkedIn"
+          aria-label="LinkedIn Pravice gestión de cartera"
           className={`${styles.social} ${styles.linkedin}`}
           target="_blank"
           rel="noopener noreferrer"
