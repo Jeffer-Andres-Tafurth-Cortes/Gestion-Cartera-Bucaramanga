@@ -16,7 +16,7 @@ export default function Footer() {
         <div className={styles.footerContent}>
           {/* Marca */}
           <div className={styles.brand}>
-            <h4>Pravice – Gestión y Cobro de Cartera</h4>
+            <h4>Pravice - Gestión y Cobro de Cartera</h4>
             <p>
               Firma especializada en gestión, administración y cobro de cartera
               en Colombia. Acompañamos a empresas y organizaciones en
