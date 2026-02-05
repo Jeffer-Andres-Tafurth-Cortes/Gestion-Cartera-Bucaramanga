@@ -31,7 +31,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
         >
-          Gestión y recuperación de cartera en Bucaramanga
+          Recuperación de cartera en Bucaramanga para empresas y personas
         </motion.h1>
 
         <motion.p
@@ -39,10 +39,14 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
         >
-          Brindamos servicios especializados en gestión y recuperación de
-          cartera en Bucaramanga, apoyando a empresas, comerciantes y personas
-          naturales que necesitan soluciones efectivas para el recaudo de
-          obligaciones pendientes, siempre bajo un marco legal y ético.
+          <p>
+            Ofrecemos servicios profesionales de{" "}
+            <strong>gestión y recuperación de cartera en Bucaramanga</strong>,
+            ayudando a empresas, comerciantes y personas naturales a recuperar
+            obligaciones pendientes mediante procesos de cobranza
+            <strong>prejurídica y jurídica</strong>, siempre bajo un marco
+            legal, ético y transparente.
+          </p>
         </motion.p>
 
         <motion.p
@@ -50,10 +54,13 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
         >
-          Entendemos que cada caso es diferente. Por eso, analizamos la
-          situación de cada cliente y diseñamos estrategias de cobro prejurídico
-          y jurídico adaptadas a la realidad del contexto empresarial y
-          comercial de Bucaramanga y Santander.
+          <p>
+            Analizamos cada caso de forma individual para diseñar estrategias de
+            cobro adaptadas al contexto empresarial y comercial de{" "}
+            <strong>Bucaramanga y Santander</strong>, priorizando la
+            recuperación efectiva de cartera sin afectar la relación con
+            clientes ni la reputación del negocio.
+          </p>
         </motion.p>
 
         <motion.button
@@ -62,7 +69,7 @@ export default function Hero() {
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
           onClick={handleClick}
         >
-          Solicitar asesoría personalizada
+          Solicitar asesoría en recuperación de cartera
         </motion.button>
       </motion.div>
 
@@ -74,7 +81,7 @@ export default function Hero() {
       >
         <Image
           src="/recuperacion-cartera.webp"
-          alt="Gestión y recuperación de cartera para empresas en Bucaramanga"
+          alt="Recuperación de cartera en Bucaramanga para empresas y comerciantes"
           width={520}
           height={340}
           sizes="(max-width: 768px) 100vw, 520px"
