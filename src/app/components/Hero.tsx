@@ -44,7 +44,7 @@ export default function Hero() {
             <strong>gestión y recuperación de cartera en Bucaramanga</strong>,
             ayudando a empresas, comerciantes y personas naturales a recuperar
             obligaciones pendientes mediante procesos de cobranza
-            <strong>prejurídica y jurídica</strong>, siempre bajo un marco
+            <strong> prejurídica y jurídica</strong>, siempre bajo un marco
             legal, ético y transparente.
           </p>
         </motion.p>

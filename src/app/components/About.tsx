@@ -36,10 +36,13 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
         >
-          En Pravice somos una firma especializada en la gestión, administración
-          y recuperación de cartera, orientada a ofrecer soluciones
-          responsables, transparentes y alineadas con la normativa legal vigente
-          en Colombia.
+          En <strong>Pravice</strong> somos una firma especializada en la
+          <strong>
+            {" "}
+            gestión, administración y recuperación de cartera en Colombia
+          </strong>
+          , orientada a ofrecer soluciones responsables, transparentes y
+          alineadas con la normativa legal vigente.
         </motion.p>
 
         <motion.p
@@ -50,8 +53,9 @@ export default function About() {
         >
           Nuestro equipo combina experiencia jurídica, análisis estratégico y
           una comunicación clara, permitiendo acompañar a empresas y personas
-          naturales en procesos de cartera prejurídica y jurídica, priorizando
-          siempre el respeto y la construcción de acuerdos sostenibles
+          naturales en procesos de{" "}
+          <strong>cartera prejurídica y jurídica</strong>, optimizando el
+          recaudo de obligaciones financieras y comerciales.
         </motion.p>
 
         <motion.p
@@ -61,9 +65,9 @@ export default function About() {
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
         >
           Trabajamos con un enfoque preventivo y correctivo, brindando control,
-          seguimiento y asesoría continua, con el objetivo de optimizar los
-          procesos de recaudo y fortalecer la relación entre las partes
-          involucradas.
+          seguimiento y asesoría continua, con el objetivo de mejorar los
+          procesos de recaudo, reducir la morosidad y fortalecer la relación
+          entre las partes involucradas.
         </motion.p>
       </motion.div>
 
