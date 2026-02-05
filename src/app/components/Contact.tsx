@@ -13,6 +13,7 @@ function handleClick() {
 export default function Contact() {
   return (
     <motion.section
+      aria-labelledby="contacto-title"
       className={styles.contact}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -36,7 +37,7 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          ¿Necesita asesoría en gestión de cartera?
+          Asesoría en gestión y recuperación de cartera en Bucaramanga
         </motion.h2>
 
         <motion.p
@@ -45,9 +46,24 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
         >
-          Nuestro equipo está preparado para brindarle una orientación clara y
-          responsable, ajustada a sus necesidades y a la normativa vigente en
-          Bucaramanga.
+          Nuestro equipo brinda{" "}
+          <strong>
+            asesoría especializada en gestión, recaudo y recuperación de cartera
+          </strong>{" "}
+          para empresas y personas naturales en{" "}
+          <strong>Bucaramanga y Santander</strong>, actuando siempre bajo la
+          normativa legal vigente en Colombia.
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
+        >
+          Analizamos su caso de manera personalizada y le orientamos sobre la
+          mejor estrategia de cobro prejurídico o jurídico, buscando resultados
+          efectivos sin afectar la relación comercial.
         </motion.p>
 
         <motion.button
@@ -57,7 +73,7 @@ export default function Contact() {
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
           onClick={handleClick}
         >
-          Solicitar asesoría
+          Solicitar asesoría en recuperación de cartera
         </motion.button>
       </motion.div>
 
@@ -71,7 +87,7 @@ export default function Contact() {
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <h3>Nuestra ubicación</h3>
+        <h3>Oficina y atención en Bucaramanga, Santander</h3>
 
         <div className={styles.mapWrapper}>
           <iframe
